@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Arial', sans-serif; 
+            background: #f5f5f5;
+            line-height: 1.6;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .container { 
+            max-width: 1200px; 
+            margin: 2rem auto; 
+            padding: 0 2rem; 
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .stat-number { 
+            font-size: 2.5rem; 
+            font-weight: bold; 
+            color: #667eea; 
+            margin-bottom: 0.5rem;
+        }
+        .messages-section {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        .section-title {
+            margin-bottom: 1.5rem;
+            color: #333;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+        .message-item {
+            border-bottom: 1px solid #eee;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+        }
+        .message-item:last-child { border-bottom: none; }
+        .message-content h4 { 
+            color: #333; 
+            margin-bottom: 0.5rem;
+        }
+        .message-meta { 
+            color: #666; 
+            font-size: 0.9rem; 
+            margin-bottom: 0.5rem;
+        }
+        .message-text { 
+            color: #555; 
+            line-height: 1.5;
+        }
+        .message-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+        .btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+        .btn:hover { transform: translateY(-1px); }
+        .btn-primary { background: #667eea; color: white; }
+        .btn-success { background: #10b981; color: white; }
+        .btn-danger { background: #ef4444; color: white; }
+        .unread { 
+            background: #f0f9ff; 
+            border-left: 4px solid #667eea;
+            padding-left: 1rem;
+        }
+        .logout-btn {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .logout-btn:hover { background: rgba(255,255,255,0.3); }
+        .loading { text-align: center; padding: 2rem; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1><i class="fas fa-tachometer-alt"></i> Admin Dashboard</h1>
+        <button onclick="logout()" class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+    </div>
+    
+    <div class="container">
+        <!-- Statistics -->
+        <div class="stats-grid" id="stats-grid">
+            <div class="loading">Loading statistics...</div>
+        </div>
+        
+        <!-- Recent Messages -->
+        <div class="messages-section">
+            <h2 class="section-title">
+                <i class="fas fa-envelope"></i> Recent Messages
+            </h2>
+            <div id="messages-container">
+                <div class="loading">Loading messages...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Load dashboard data
+        async function loadDashboardData() {
+            try {
+                const response = await fetch('/api/admin/stats');
+                const result = await response.json();
+                
+                if (result.success) {
+                    displayStats(result.data);
+                    displayMessages(result.data.recentMessages);
+                } else {
+                    throw new Error(result.message);
+                }
+            } catch (error) {
+                console.error('Error loading dashboard data:', error);
+                document.getElementById('stats-grid').innerHTML = '<div class="loading">Error loading data</div>';
+                document.getElementById('messages-container').innerHTML = '<div class="loading">Error loading messages</div>';
+            }
+        }
+        
+        function displayStats(data) {
+            const statsHtml = `
+                <div class="stat-card">
+                    <div class="stat-number">${data.totalMessages}</div>
+                    <div>Total Messages</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">${data.unreadMessages}</div>
+                    <div>Unread Messages</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">${data.totalDownloads}</div>
+                    <div>Resume Downloads</div>
+                </div>
+            `;
+            document.getElementById('stats-grid').innerHTML = statsHtml;
+        }
+        
+        function displayMessages(messages) {
+            if (!messages || messages.length === 0) {
+                document.getElementById('messages-container').innerHTML = '<p>No messages yet.</p>';
+                return;
+            }
+            
+            const messagesHtml = messages.map(message => `
+                <div class="message-item ${message.status === 'unread' ? 'unread' : ''}">
+                    <div class="message-content">
+                        <h4>${escapeHtml(message.name)}</h4>
+                        <div class="message-meta">
+                            <i class="fas fa-envelope"></i> ${escapeHtml(message.email)} |
+                            <i class="fas fa-clock"></i> ${new Date(message.created_at).toLocaleString()}
+                            ${message.status === 'unread' ? '<span style="color: #ef4444; font-weight: bold;">• UNREAD</span>' : ''}
+                        </div>
+                        <div class="message-text">
+                            ${escapeHtml(message.preview || message.message.substring(0, 100))}
+                            ${message.message.length > 100 ? '...' : ''}
+                        </div>
+                    </div>
+                    <div class="message-actions">
+                        ${message.status === 'unread' ? 
+                            `<button onclick="markAsRead(${message.id})" class="btn btn-success">
+                                <i class="fas fa-check"></i> Mark Read
+                            </button>` : ''
+                        }
+                        <a href="mailto:${escapeHtml(message.email)}" class="btn btn-primary">
+                            <i class="fas fa-reply"></i> Reply
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+            
+            document.getElementById('messages-container').innerHTML = messagesHtml;
+        }
+        
+        async function markAsRead(messageId) {
+            try {
+                const response = await fetch(`/api/admin/mark-read/${messageId}`, {
+                    method: 'POST'
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    // Reload dashboard data
+                    loadDashboardData();
+                } else {
+                    alert('Failed to mark message as read');
+                }
+            } catch (error) {
+                console.error('Error marking message as read:', error);
+                alert('Error marking message as read');
+            }
+        }
+        
+        async function logout() {
+            try {
+                const response = await fetch('/api/admin/logout', {
+                    method: 'POST'
+                });
+                
+                if (response.ok) {
+                    window.location.href = '/';
+                }
+            } catch (error) {
+                console.error('Logout error:', error);
+                window.location.href = '/';
+            }
+        }
+        
+        function escapeHtml(text) {
+            const map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            };
+            return text.replace(/[&<>"']/g, function(m) { return map[m]; });
+        }
+        
+        // Load data on page load
+        loadDashboardData();
+        
+        // Refresh data every 30 seconds
+        setInterval(loadDashboardData, 30000);
+    </script>
+</body>
+</html>

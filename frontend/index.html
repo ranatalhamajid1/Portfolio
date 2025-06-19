@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rana Muhammad Talha Majid - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Aspiring Cybersecurity Expert and Full Stack Developer with expertise in secure web development, analytics integration, and modern UI/UX design">
+    <meta name="keywords" content="portfolio, cybersecurity, full stack developer, web security, analytics, UI/UX, Shopify developer">
+    <meta name="author" content="Rana Muhammad Talha Majid">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">RMTM</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><button class="theme-toggle" id="theme-toggle" title="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Rana Muhammad Talha Majid</span>
+                    </h1>
+                    <div class="typing-container">
+                        <span class="typing-text" id="typing-text"></span>
+                        <span class="cursor">|</span>
+                    </div>
+                    <p class="hero-description">
+                        Aspiring <strong>Cybersecurity Expert</strong> and <strong>Full Stack Developer</strong> with a strong foundation in secure web development, analytics integration, and modern UI/UX design. Passionate about building scalable, user-friendly solutions and enhancing web security through smart code.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                        <a href="resume.pdf" class="btn btn-secondary" id="resume-btn">
+                            <i class="fas fa-download"></i> Resume
+                        </a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/rana-muhammad-talha-majid-25233228b" target="_blank" rel="noopener" class="social-link" title="LinkedIn Profile">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/ranatalhamajid1" target="_blank" rel="noopener" class="social-link" title="GitHub Profile">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:talhamajid404@gmail.com" class="social-link" title="Send Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://tryhackme.com/p/ranatalhamajid1" target="_blank" rel="noopener" class="social-link" title="TryHackMe Profile">
+                            <i class="fas fa-flag"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="floating-card">
+                        <img src="talha.jpg" alt="Rana Muhammad Talha Majid" class="profile-img">
+                        <div class="floating-elements">
+                            <div class="floating-icon delay-0">💻</div>
+                            <div class="floating-icon delay-1">🔒</div>
+                            <div class="floating-icon delay-2">🎬</div>
+                            <div class="floating-icon delay-3">⚡</div>
+                            <div class="floating-icon delay-4">🚀</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Cybersecurity enthusiast with full-stack development expertise</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-card">
+                        <h3>🎓 Education & Background</h3>
+                        <p><strong>University of Engineering and Technology (UET), Taxila</strong></p>
+                        <p>Bachelor of Science in Computer Science</p>
+                        <p>Specialized in cybersecurity, full-stack development, and secure web applications. 
+                        Currently building expertise in penetration testing, web security, and modern development frameworks.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>💡 Professional Mission</h3>
+                        <p>
+                            As an aspiring cybersecurity expert and full-stack developer, I focus on creating secure, 
+                            scalable web solutions while maintaining exceptional user experiences. My approach combines 
+                            strong technical skills with security-first thinking, ensuring every application I build 
+                            is both functional and protected against modern threats.
+                        </p>
+                    </div>
+                    <div class="about-card">
+                        <h3>🎯 Current Focus</h3>
+                        <p>
+                            Actively developing skills in advanced cybersecurity practices, modern web frameworks, 
+                            and analytics integration. I'm passionate about bridging the gap between development 
+                            and security, creating solutions that are both innovative and secure.
+                        </p>
+                    </div>
+                    <div class="about-card">
+                        <h3>🌟 What Sets Me Apart</h3>
+                        <p>
+                            My unique combination of cybersecurity knowledge and full-stack development skills allows 
+                            me to build applications with security baked in from the ground up. I understand both 
+                            the attacker's mindset and the developer's challenges, enabling me to create robust, 
+                            secure solutions.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="100">0</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="2">0</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="25">0</div>
+                        <div class="stat-label">Technologies</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="5">0</div>
+                        <div class="stat-label">Certifications</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="25">0</div>
+                        <div class="stat-label">Bounce Rate Reduction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Update your about stats to reflect freelance work -->
+<div class="about-stats">
+    <div class="stat-card">
+        <div class="stat-number" data-target="150">0</div>
+        <div class="stat-label">Projects Completed</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number" data-target="3">0</div>
+        <div class="stat-label">Years Experience</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number" data-target="25">0</div>
+        <div class="stat-label">Technologies</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number" data-target="5">0</div>
+        <div class="stat-label">Certifications</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number" data-target="98">0</div>
+        <div class="stat-label">Client Satisfaction</div>
+    </div>
+</div>
+    </section>
+
+ <!-- Experience Section - Updated -->
+<section id="experience" class="experience">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Professional Experience</h2>
+            <p class="section-subtitle">Building secure and scalable web solutions across multiple platforms</p>
+        </div>
+        <div class="experience-timeline">
+            <div class="timeline-item">
+                <div class="timeline-marker">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3>Frontend Developer & Shopify Intern</h3>
+                        <div class="company-info">
+                            <span class="company">Capxa E-commerce</span>
+                            <span class="duration">May 2024 - Aug 2024</span>
+                        </div>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="role-description">
+                            Specialized in e-commerce development with focus on performance optimization and analytics integration during intensive 3-month internship.
+                        </p>
+                        <ul class="achievements">
+                            <li>
+                                <i class="fas fa-code"></i>
+                                <span>Customized Shopify themes using <strong>Liquid, HTML/CSS, and JavaScript</strong></span>
+                            </li>
+                            <li>
+                                <i class="fas fa-chart-line"></i>
+                                <span>Improved landing page performance, <strong>reducing bounce rate by 25%</strong></span>
+                            </li>
+                            <li>
+                                <i class="fas fa-analytics"></i>
+                                <span>Integrated and debugged <strong>Meta Pixel & Google Tag Manager</strong></span>
+                            </li>
+                            <li>
+                                <i class="fas fa-users"></i>
+                                <span>Collaborated on <strong>A/B testing</strong> and enhanced user journey using <strong>GA4</strong> and other analytics tools</span>
+                            </li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Shopify</span>
+                            <span class="tech-tag">Liquid</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">Google Analytics</span>
+                            <span class="tech-tag">Meta Pixel</span>
+                            <span class="tech-tag">GTM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3>Freelance Web Developer</h3>
+                        <div class="company-info">
+                            <span class="company">Fiverr & Upwork</span>
+                            <span class="duration">2023 - Present</span>
+                        </div>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="role-description">
+                            Providing comprehensive web development and cybersecurity consulting services to clients worldwide through major freelancing platforms.
+                        </p>
+                        <ul class="achievements">
+                            <li>
+                                <i class="fas fa-globe"></i>
+                                <span>Developed custom websites and web applications for <strong>international clients</strong></span>
+                            </li>
+                            <li>
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Provided <strong>cybersecurity assessments</strong> and security implementations</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-star"></i>
+                                <span>Maintained <strong>5-star ratings</strong> with consistent client satisfaction</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <span>Delivered projects on time with <strong>99% completion rate</strong></span>
+                            </li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">WordPress</span>
+                            <span class="tech-tag">Cybersecurity</span>
+                            <span class="tech-tag">SEO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-subtitle">Comprehensive technical expertise across multiple domains</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Cybersecurity</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <i class="fas fa-flag"></i>
+                            <span>TryHackMe</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-level="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-linux"></i>
+                            <span>Linux</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-level="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Wireshark</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-level="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-bug"></i>
+                            <span>Metasploit</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-level="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-search"></i>
+                            <span>Penetration Testing</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-level="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-lock"></i>
+                            <span>Web Security</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-level="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Frontend Development</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-level="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-level="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-level="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-level="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-shopify"></i>
+                            <span>Shopify (Liquid)</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-level="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Responsive Design</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-level="90"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-server"></i>
+                        <h3>Backend Development</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <i class="fab fa-php"></i>
+                            <span>PHP</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-level="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-level="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>SQLite</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-level="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>MySQL</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-level="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Secure Coding</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-level="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-chart-bar"></i>
+                        <h3>Analytics & Tools</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <i class="fab fa-google"></i>
+                            <span>Google Analytics (GA4)</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-level="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-tags"></i>
+                            <span>Google Tag Manager</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-level="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-facebook"></i>
+                            <span>Meta Pixel</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-level="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git & GitHub</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-level="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <span>VS Code</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-level="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-video"></i>
+                            <span>Video Editing</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-level="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Projects Section - Updated without images -->
+<section id="projects" class="projects">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Showcasing technical expertise and professional achievements</p>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card featured">
+                <div class="project-image">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://drive.google.com/drive/folders/1QiHfsQXcBhuoTmY8-36GREO7RCPUklFQ?usp=drive_link" rel="noopener" target="_blank" rel="noopener" class="project-link" title="View Project">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://github.com/ranatalhamajid1"rel="noopener" target="_blank" class="project-link" title="View on GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-placeholder capxa-project">
+                        <div class="project-icon-wrapper">
+                            <i class="fab fa-shopify"></i>
+                            <div class="achievement-badge">25% Improvement</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="featured-badge">Professional Work</div>
+                    <h3>Capxa E-commerce Development</h3>
+                    <p>Professional e-commerce development work during internship showcasing Shopify theme customization, performance optimization achieving 25% bounce rate reduction, and comprehensive analytics integration using Meta Pixel and Google Tag Manager.</p>
+                    <div class="project-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>25% Bounce Rate Reduction</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-clock"></i>
+                            <span>May 2024 - Aug 2024</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Shopify</span>
+                        <span class="tech-tag">Liquid</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">HTML/CSS</span>
+                        <span class="tech-tag">Google Analytics</span>
+                        <span class="tech-tag">Meta Pixel</span>
+                        <span class="tech-tag">GTM</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card featured">
+                <div class="project-image">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#certifications" class="project-link" title="View Certifications">
+                                <i class="fas fa-certificate"></i>
+                            </a>
+                            <a href="https://github.com/ranatalhamajid1" rel="noopener" target="_blank" class="project-link" title="View on GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-placeholder certifications-project">
+                        <div class="project-icon-wrapper">
+                            <i class="fas fa-award"></i>
+                            <div class="cert-count-badge">5 Certifications</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="featured-badge">Certifications</div>
+                    <h3>Professional Certifications Portfolio</h3>
+                    <p>Comprehensive collection of industry-recognized certifications including AI/ML, PenTest Cyber Specialist, Google Cybersecurity Foundations, IBM Full Stack Developer, and TryHackMe Cybersecurity Practitioner.</p>
+                    <div class="project-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Cybersecurity Specialist</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-code"></i>
+                            <span>Full Stack Certified</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">AI/ML</span>
+                        <span class="tech-tag">Cybersecurity</span>
+                        <span class="tech-tag">PenTest</span>
+                        <span class="tech-tag">Full Stack</span>
+                        <span class="tech-tag">Google</span>
+                        <span class="tech-tag">IBM</span>
+                        <span class="tech-tag">TryHackMe</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://www.fiverr.com/ranatalhamajid1" rel="noopener" target="_blank" rel="noopener" class="project-link" title="View Fiverr Profile">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://www.upwork.com/freelancers/ranatalhamajid1" rel="noopener" target="_blank" class="project-link" title="View Upwork Profile">
+                                <i class="fas fa-user"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-placeholder freelance-project">
+                        <div class="project-icon-wrapper">
+                            <i class="fas fa-handshake"></i>
+                            <div class="rating-badge">⭐ 5.0 Rating</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Freelance Web Development Services</h3>
+                    <p>Comprehensive freelance services on Fiverr and Upwork including custom website development, cybersecurity consulting, and performance optimization with consistent 5-star client ratings and successful project delivery.</p>
+                    <div class="project-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-star"></i>
+                            <span>5-Star Ratings</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-globe"></i>
+                            <span>International Clients</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Freelancing</span>
+                        <span class="tech-tag">Client Management</span>
+                        <span class="tech-tag">Full Stack</span>
+                        <span class="tech-tag">Cybersecurity</span>
+                        <span class="tech-tag">WordPress</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://drive.google.com/drive/folders/1QiHfsQXcBhuoTmY8-36GREO7RCPUklFQ?usp=drive_link" rel="noopener" target="_blank" class="project-link" title="View Project">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://github.com/ranatalhamajid1" rel="noopener" target="_blank" class="project-link" title="View on GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-placeholder contact-form-project">
+                        <div class="project-icon-wrapper">
+                            <i class="fas fa-envelope-open"></i>
+                            <div class="security-badge">🔒 Secure</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Custom Contact Form with PHP & SQLite</h3>
+                    <p>Secure contact form implementation with input validation, backend processing, and SQLite database integration for storing and managing user queries efficiently with security best practices and data protection.</p>
+                    <div class="project-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Security Focused</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-database"></i>
+                            <span>Database Integration</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">SQLite</span>
+                        <span class="tech-tag">Input Validation</span>
+                        <span class="tech-tag">Security</span>
+                        <span class="tech-tag">Backend</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="project-link" title="View Project">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://github.com/ranatalhamajid1" rel="noopener" target="_blank" class="project-link" title="View on GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-placeholder analytics-project">
+                        <div class="project-icon-wrapper">
+                            <i class="fas fa-chart-bar"></i>
+                            <div class="analytics-badge">📊 GA4</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Analytics Integration Suite</h3>
+                    <p>Advanced analytics implementation showcasing custom event tracking with JavaScript, seamless Google Tag Manager integration, and comprehensive GA4 reporting setup for e-commerce optimization and user behavior analysis.</p>
+                    <div class="project-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Custom Tracking</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-tags"></i>
+                            <span>GTM Integration</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Google Tag Manager</span>
+                        <span class="tech-tag">GA4</span>
+                        <span class="tech-tag">Event Tracking</span>
+                        <span class="tech-tag">Meta Pixel</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://tryhackme.com/p/ranatalhamajid1" rel="noopener" target="_blank" class="project-link" title="View TryHackMe Profile">
+                                <i class="fas fa-flag"></i>
+                            </a>
+                            <a href="https://github.com/ranatalhamajid1" rel="noopener" target="_blank" class="project-link" title="View on GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-placeholder security-project">
+                        <div class="project-icon-wrapper">
+                            <i class="fas fa-user-shield"></i>
+                            <div class="pentest-badge">🔍 PenTest</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Cybersecurity Assessment Tools</h3>
+                    <p>Comprehensive collection of security tools and scripts for penetration testing, vulnerability assessment, and network security analysis with automated reporting and detailed security recommendations for clients.</p>
+                    <div class="project-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-bug"></i>
+                            <span>Vulnerability Assessment</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-terminal"></i>
+                            <span>Automation Scripts</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Bash</span>
+                        <span class="tech-tag">Penetration Testing</span>
+                        <span class="tech-tag">Security Assessment</span>
+                        <span class="tech-tag">Linux</span>
+                        <span class="tech-tag">Metasploit</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Certifications & Training</h2>
+                <p class="section-subtitle">Continuous learning and professional development</p>
+            </div>
+            <div class="certifications-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>AI/ML Certification</h3>
+                        <p class="cert-provider">eHunar</p>
+                        <p class="cert-description">Comprehensive training in Artificial Intelligence and Machine Learning concepts, algorithms, and practical applications.</p>
+                        <div class="cert-badge">AI/ML</div>
+                    </div>
+                </div>
+
+                <div class="cert-card featured">
+                    <div class="cert-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>PenTest Cyber Specialist</h3>
+                        <p class="cert-provider">National IT Skillsets Expansion Program</p>
+                        <p class="cert-description">Advanced penetration testing and cybersecurity specialist certification covering ethical hacking and security assessment methodologies.</p>
+                        <div class="cert-badge featured-cert">Specialist</div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Google Foundations of Cybersecurity</h3>
+                        <p class="cert-provider">Coursera</p>
+                        <p class="cert-description">Fundamental cybersecurity principles, risk management, and security frameworks from Google's cybersecurity program.</p>
+                        <div class="cert-badge">Google</div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fab fa-ibm"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>IBM Full Stack Developer</h3>
+                        <p class="cert-provider">Coursera</p>
+                        <p class="cert-description">Comprehensive full-stack development certification covering front-end, back-end, and database technologies.</p>
+                        <div class="cert-badge">IBM</div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Cybersecurity Practitioner</h3>
+                        <p class="cert-provider">TryHackMe</p>
+                        <p class="cert-description">Hands-on cybersecurity training through practical challenges, CTF competitions, and real-world security scenarios.</p>
+                        <div class="cert-badge">TryHackMe</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Updated Contact Section with Working Google Form -->
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Let's collaborate and build something amazing together</p>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Let's Connect</h3>
+                <p>I'm always interested in new opportunities, collaborations, and exciting projects. Whether you need cybersecurity consultation, full-stack development, Shopify customization, or analytics integration, I'm here to help!</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>talhamajid404@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Taxila, Pakistan</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>UET Taxila - Computer Science</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Frontend Developer & Security Specialist</span>
+                    </div>
+                </div>
+                <div class="contact-cta">
+                    <h4>Quick Contact Options:</h4>
+                    <div class="quick-contact-buttons">
+                        <a href="mailto:talhamajid404@gmail.com" class="quick-btn">
+                            <i class="fas fa-envelope"></i> Email Me
+                        </a>
+                        <a href="https://www.linkedin.com/in/rana-muhammad-talha-majid-25233228b" rel="noopener" target="_blank" class="quick-btn">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/ranatalhamajid1" rel="noopener" target="_blank" class="quick-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://drive.google.com/drive/folders/1QiHfsQXcBhuoTmY8-36GREO7RCPUklFQ?usp=drive_link" rel="noopener" target="_blank" class="quick-btn">
+                            <i class="fas fa-folder"></i> Portfolio
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-container">
+                <div class="form-header">
+                    <h3>Send me a message</h3>
+                    <p>Fill out the form below and I'll get back to you as soon as possible.</p>
+                </div>
+                <div class="google-form-embed">
+                    <iframe 
+                        src="https://docs.google.com/forms/d/e/1FAIpQLScsq6U_lIhOB22Ts1UfFHQRpHDv1iGvdTrJL7TlXwSj5rvXxA/viewform?embedded=true" 
+                        width="100%" 
+                        height="650" 
+                        frameborder="0" 
+                        marginheight="0" 
+                        marginwidth="0"
+                        title="Contact Form">
+                        Loading contact form...
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <span class="logo-text">RMTM</span>
+                    </div>
+                    <p>Aspiring Cybersecurity Expert & Full Stack Developer | Building Secure & Scalable Solutions</p>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/rana-muhammad-talha-majid-25233228b" target="_blank" rel="noopener" rel="noopener" class="social-link" title="LinkedIn Profile">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/ranatalhamajid1" target="_blank" class="social-link" title="GitHub Profile" rel="noopener">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:talhamajid404@gmail.com" class="social-link" title="Send Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://tryhackme.com/p/ranatalhamajid1" target="_blank" class="social-link" title="TryHackMe Profile" rel="noopener">
+                            <i class="fas fa-flag"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#experience">Experience</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#contact">Full-Stack Development</a></li>
+                            <li><a href="#contact">Cybersecurity Consulting</a></li>
+                            <li><a href="#contact">Shopify Development</a></li>
+                            <li><a href="#contact">Analytics Integration</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Portfolio</h4>
+                        <ul>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#certifications">Certifications</a></li>
+                            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScsq6U_lIhOB22Ts1UfFHQRpHDv1iGvdTrJL7TlXwSj5rvXxA/viewform?usp=dialog" target="_blank" rel="noopener" >Contact Form</a></li>
+                            <li><a href="https://drive.google.com/drive/folders/1QiHfsQXcBhuoTmY8-36GREO7RCPUklFQ?usp=drive_link" target="_blank" rel="noopener" >Web Portfolio</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-text">
+                    <p>&copy; 2024 Rana Muhammad Talha Majid. All rights reserved. Built with ❤️ and lots of ☕</p>
+                </div>
+                <div class="footer-credits">
+                    <p>Designed & Developed by <span class="gradient-text">RMTM</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scroll-to-top" title="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

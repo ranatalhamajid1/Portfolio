@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Portfolio</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 450px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        .credentials-box {
+            background: #e8f4fd;
+            border: 2px solid #bee5eb;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .credentials-box h3 {
+            color: #0c5460;
+            margin-bottom: 10px;
+        }
+        .credential-item {
+            background: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            margin: 5px 0;
+            font-family: monospace;
+            font-size: 14px;
+            border: 1px solid #b8daff;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        .form-group input[readonly] {
+            background: #f8f9fa;
+            color: #6c757d;
+        }
+        .btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+        }
+        .btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .message {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .info { background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+        .debug-section {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #6c757d;
+        }
+        .debug-item {
+            margin: 5px 0;
+            padding: 3px 0;
+        }
+        .back-link {
+            text-align: center;
+            margin-top: 25px;
+        }
+        .back-link a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .test-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .test-btn {
+            padding: 8px 12px;
+            border: 1px solid #dee2e6;
+            background: #f8f9fa;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: background 0.2s;
+        }
+        .test-btn:hover {
+            background: #e9ecef;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔐 Admin Login</h1>
+            <p>Portfolio Dashboard Access</p>
+        </div>
+
+        <div class="credentials-box">
+            <h3>🔑 Login Credentials</h3>
+            <div class="credential-item">
+                <strong>Username:</strong> ranatalhamajid1
+            </div>
+            <div class="credential-item">
+                <strong>Password:</strong> YourSecurePassword123!
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="username">👤 Username:</label>
+            <input type="text" id="username" value="ranatalhamajid1" readonly>
+        </div>
+
+        <div class="form-group">
+            <label for="password">🔒 Password:</label>
+            <input type="password" id="password" placeholder="Enter password">
+        </div>
+
+        <button type="button" class="btn" id="loginBtn" onclick="performLogin()">
+            🚀 Login to Dashboard
+        </button>
+
+        <div class="test-buttons">
+            <button class="test-btn" onclick="testServer()">🔍 Test Server</button>
+            <button class="test-btn" onclick="fillPassword()">🔑 Fill Password</button>
+            <button class="test-btn" onclick="checkSession()">👤 Check Session</button>
+            <button class="test-btn" onclick="clearData()">🗑️ Clear Data</button>
+        </div>
+
+        <div id="message"></div>
+
+        <div class="debug-section">
+            <strong>🔧 Debug Information:</strong>
+            <div class="debug-item">🕒 Current Time: <span id="currentTime">2025-06-09 10:32:05</span></div>
+            <div class="debug-item">👤 Current User: ranatalhamajid1</div>
+            <div class="debug-item">🌐 Server Status: <span id="serverStatus">Checking...</span></div>
+            <div class="debug-item">🔐 Session Status: <span id="sessionStatus">Unknown</span></div>
+            <div class="debug-item">📍 Current URL: <span id="currentUrl">localhost:3000/admin-login</span></div>
+        </div>
+
+        <div class="back-link">
+            <a href="/">← Back to Portfolio</a>
+        </div>
+    </div>
+
+    <script>
+        // Global variables
+        let debugMode = true;
+        let loginAttempts = 0;
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🚀 Ultimate login page loaded');
+            updateTime();
+            setInterval(updateTime, 1000);
+            checkServerStatus();
+            checkSessionStatus();
+            document.getElementById('password').focus();
+            document.getElementById('currentUrl').textContent = window.location.href;
+        });
+
+        // Update current time
+        function updateTime() {
+            const now = new Date();
+            const utcTime = now.toISOString().replace('T', ' ').substring(0, 19);
+            document.getElementById('currentTime').textContent = utcTime;
+        }
+
+        // Show message
+        function showMessage(message, type = 'info') {
+            const messageDiv = document.getElementById('message');
+            messageDiv.innerHTML = `<div class="message ${type}">${message}</div>`;
+            console.log(`📢 Message (${type}):`, message);
+        }
+
+        // Fill password automatically
+        function fillPassword() {
+            document.getElementById('password').value = 'YourSecurePassword123!';
+            showMessage('🔑 Password filled automatically', 'info');
+        }
+
+        // Test server connection
+        async function testServer() {
+            showMessage('🔍 Testing server connection...', 'info');
+            try {
+                const response = await fetch('/api/health');
+                const data = await response.json();
+                if (response.ok && data.status === 'OK') {
+                    document.getElementById('serverStatus').textContent = 'Online ✅';
+                    showMessage('✅ Server is online and healthy', 'success');
+                    console.log('📊 Server health data:', data);
+                } else {
+                    document.getElementById('serverStatus').textContent = 'Error ❌';
+                    showMessage('❌ Server health check failed', 'error');
+                }
+            } catch (error) {
+                document.getElementById('serverStatus').textContent = 'Offline ❌';
+                showMessage('❌ Cannot connect to server: ' + error.message, 'error');
+                console.error('Server test error:', error);
+            }
+        }
+
+        // Check server status
+        async function checkServerStatus() {
+            try {
+                const response = await fetch('/api/health');
+                if (response.ok) {
+                    document.getElementById('serverStatus').textContent = 'Online ✅';
+                } else {
+                    document.getElementById('serverStatus').textContent = 'Error ❌';
+                }
+            } catch (error) {
+                document.getElementById('serverStatus').textContent = 'Offline ❌';
+            }
+        }
+
+        // Check session status
+        async function checkSession() {
+            try {
+                const response = await fetch('/api/admin/check');
+                const data = await response.json();
+                if (data.authenticated) {
+                    document.getElementById('sessionStatus').textContent = 'Authenticated ✅';
+                    showMessage('✅ You are already logged in! Redirecting...', 'success');
+                    setTimeout(() => window.location.href = '/admin', 2000);
+                } else {
+                    document.getElementById('sessionStatus').textContent = 'Not authenticated ❌';
+                }
+                console.log('Session check result:', data);
+            } catch (error) {
+                document.getElementById('sessionStatus').textContent = 'Error ❌';
+                console.error('Session check error:', error);
+            }
+        }
+
+        // Check session status on load
+        async function checkSessionStatus() {
+            try {
+                const response = await fetch('/api/admin/check');
+                const data = await response.json();
+                if (data.authenticated) {
+                    document.getElementById('sessionStatus').textContent = 'Authenticated ✅';
+                } else {
+                    document.getElementById('sessionStatus').textContent = 'Not authenticated ❌';
+                }
+            } catch (error) {
+                document.getElementById('sessionStatus').textContent = 'Error ❌';
+            }
+        }
+
+        // Clear all data
+        function clearData() {
+            document.getElementById('password').value = '';
+            document.getElementById('message').innerHTML = '';
+            showMessage('🗑️ Form data cleared', 'info');
+            document.getElementById('password').focus();
+        }
+
+        // Handle Enter key
+        document.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performLogin();
+            }
+        });
+
+        // Main login function
+        async function performLogin() {
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const loginBtn = document.getElementById('loginBtn');
+            
+            loginAttempts++;
+            console.log(`🔐 Login attempt #${loginAttempts} at:`, new Date().toISOString());
+            console.log('📋 Credentials:', { username, passwordLength: password.length });
+            
+            if (!password) {
+                showMessage('❌ Please enter your password', 'error');
+                document.getElementById('password').focus();
+                return;
+            }
+            
+            // Show loading state
+            loginBtn.disabled = true;
+            loginBtn.textContent = '🔄 Authenticating...';
+            showMessage('🔄 Verifying credentials...', 'info');
+            
+            try {
+                console.log('📡 Sending login request to /api/admin/login');
+                
+                const requestBody = { username, password };
+                console.log('📦 Request body:', { username, password: '***' });
+                
+                const response = await fetch('/api/admin/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    credentials: 'same-origin',
+                    body: JSON.stringify(requestBody)
+                });
+                
+                console.log('📡 Response status:', response.status);
+                console.log('📡 Response headers:', Object.fromEntries(response.headers.entries()));
+                
+                let data;
+                try {
+                    data = await response.json();
+                    console.log('📊 Response data:', data);
+                } catch (parseError) {
+                    console.error('❌ Failed to parse response as JSON:', parseError);
+                    throw new Error('Invalid server response format');
+                }
+                
+                if (response.status === 200 && data.success === true) {
+                    showMessage('✅ Login successful! Redirecting to dashboard...', 'success');
+                    loginBtn.textContent = '✅ Success! Redirecting...';
+                    document.getElementById('sessionStatus').textContent = 'Authenticated ✅';
+                    
+                    console.log('🚀 Login successful! User:', data.user);
+                    console.log('🚀 Login time:', data.loginTime);
+                    
+                    // Multiple redirect strategies
+                    setTimeout(() => {
+                        console.log('🔄 Attempting redirect to /admin...');
+                        window.location.href = '/admin';
+                    }, 1500);
+                    
+                    setTimeout(() => {
+                        console.log('🔄 Backup redirect...');
+                        showMessage('✅ Login successful! <a href="/admin" style="color: #155724; font-weight: bold; text-decoration: underline;">Click here to access dashboard →</a>', 'success');
+                    }, 4000);
+                    
+                } else {
+                    const errorMessage = data.message || 'Unknown login error';
+                    console.log('❌ Login failed:', errorMessage);
+                    showMessage('❌ Login failed: ' + errorMessage, 'error');
+                    
+                    // Clear password and refocus
+                    document.getElementById('password').value = '';
+                    document.getElementById('password').focus();
+                }
+                
+            } catch (error) {
+                console.error('❌ Login request error:', error);
+                showMessage('❌ Connection error: ' + error.message, 'error');
+            } finally {
+                loginBtn.disabled = false;
+                loginBtn.textContent = '🚀 Login to Dashboard';
+            }
+        }
+    </script>
+</body>
+</html>

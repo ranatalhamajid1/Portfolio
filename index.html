@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rana Muhammad Talha Majid — Full Stack Developer & Cybersecurity Enthusiast</title>
+  <meta name="description"
+    content="Portfolio of Rana Muhammad Talha Majid — Full Stack Developer, Cybersecurity Enthusiast, E-Commerce Strategist, and Video Editor based in Pakistan." />
+  <meta name="keywords"
+    content="full stack developer, cybersecurity, e-commerce, video editor, Pakistan, portfolio, NexaGrowth" />
+  <meta name="author" content="Rana Muhammad Talha Majid" />
+  <meta property="og:title" content="Rana Muhammad Talha Majid — Portfolio" />
+  <meta property="og:description" content="I build digital systems that scale, convert & secure." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-text">Talha<span class="logo-dot">.</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="theme-icon" id="themeIcon">☀</span>
+        </button>
+        <a href="Assets/cvs/Resume (1).pdf" download class="btn btn-sm">Resume</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#skills" class="mobile-link">Skills</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#experience" class="mobile-link">Experience</a>
+    <a href="#services" class="mobile-link">Services</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="hero-container">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        Available for opportunities
+      </div>
+      <h1 class="hero-title reveal">
+        I BUILD DIGITAL<br />
+        <span class="hero-title-gradient">SYSTEMS THAT</span><br />
+        SCALE, CONVERT<br />
+        <span class="hero-title-outline">&amp; SECURE.</span>
+      </h1>
+      <p class="hero-subtitle reveal">
+        <span id="typingText"></span><span class="typing-cursor">|</span>
+      </p>
+      <div class="hero-cta reveal">
+        <a href="#contact" class="btn btn-primary">Hire Me</a>
+        <a href="#projects" class="btn btn-outline">View Projects</a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat-item">
+          <span class="stat-number" data-target="2.5" data-suffix="x">0</span>
+          <span class="stat-label">ROAS Achieved</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="50" data-suffix="+">0</span>
+          <span class="stat-label">Videos Edited</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="10" data-suffix="+">0</span>
+          <span class="stat-label">Ad Campaigns</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="3" data-suffix="+">0</span>
+          <span class="stat-label">Shopify Stores</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-col reveal">
+          <div class="about-image-wrap" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare="true"
+            data-tilt-max-glare="0.5">
+            <img src="Assets/talha.jpg" alt="Rana Muhammad Talha Majid" class="about-img" />
+            <div class="about-image-tag">
+              <span class="tag-icon">📍</span> Pakistan
+            </div>
+          </div>
+        </div>
+        <div class="about-content reveal">
+          <div class="section-label">About Me</div>
+          <h2 class="section-title">Not Just a Developer.<br />A Digital Architect.</h2>
+          <p class="about-text">
+            I'm <strong>Rana Muhammad Talha Majid</strong> — a multidisciplinary digital professional who doesn't fit in
+            one box. I build full-stack web applications, run high-converting ad campaigns, secure digital
+            infrastructure, and craft compelling video content.
+          </p>
+          <p class="about-text">
+            As the founder of <strong>NexaGrowth</strong>, I've helped businesses grow through data-driven marketing
+            strategies — driving a 2.5× ROAS and a 35% reduction in CPA. My technical foundation spans full-stack
+            development to cybersecurity, giving me a rare 360° view of the digital world.
+          </p>
+          <p class="about-text">
+            I don't just solve problems — I architect solutions. Whether it's building a cybersecurity platform,
+            optimizing Shopify stores, or producing viral video content, every project I touch is built to perform.
+          </p>
+          <div class="about-tags">
+            <span class="tag">Full Stack Dev</span>
+            <span class="tag">Cybersecurity</span>
+            <span class="tag">E-Commerce</span>
+            <span class="tag">Video Editing</span>
+            <span class="tag">Digital Marketing</span>
+            <span class="tag">Founder</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">What I Know</div>
+        <h2 class="section-title">Skills &amp; Expertise</h2>
+        <p class="section-desc">A hybrid skill set built across development, security, marketing, and creative
+          production.</p>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-card reveal">
+          <div class="skill-card-icon">⚡</div>
+          <h3 class="skill-card-title">Development</h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>HTML & CSS</span><span>95%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="95"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>JavaScript (ES6)</span><span>85%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>PHP</span><span>80%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>MySQL</span><span>82%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="82"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-icon">🛡️</div>
+          <h3 class="skill-card-title">Cybersecurity</h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>Penetration Testing</span><span>78%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="78"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>OWASP Top 10</span><span>82%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="82"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>Nmap & Recon</span><span>75%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="75"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>API Security</span><span>80%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="80"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-icon">📊</div>
+          <h3 class="skill-card-title">Marketing</h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>Facebook Ads</span><span>90%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="90"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>TikTok Ads</span><span>85%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>Shopify</span><span>88%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="88"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>SEO & Analytics</span><span>80%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="80"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-icon">🎬</div>
+          <h3 class="skill-card-title">Video Editing</h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>Premiere Pro</span><span>88%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="88"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>CapCut</span><span>95%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="95"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>Motion Graphics</span><span>80%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>AI Video Tools</span><span>85%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="85"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Work</div>
+        <h2 class="section-title">Selected Projects</h2>
+        <p class="section-desc">Real-world projects with measurable results — built to perform, not just to look good.
+        </p>
+      </div>
+
+      <div class="projects-filter reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="dev">Development</button>
+        <button class="filter-btn" data-filter="cyber">Cybersecurity</button>
+        <button class="filter-btn" data-filter="marketing">Marketing</button>
+        <button class="filter-btn" data-filter="video">Video</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- SpectraOps -->
+        <div class="project-card reveal" data-category="cyber">
+          <div class="project-media">
+            <video class="project-video" muted loop playsinline poster="">
+              <source src="Assets/Web Portfolio/SpectraOps (full stack).png" type="video/mp4" />
+            </video>
+            <div class="project-overlay">
+              <div class="project-tags">
+                <span class="project-tag">PHP</span>
+                <span class="project-tag">MySQL</span>
+                <span class="project-tag">APIs</span>
+                <span class="project-tag">Cybersecurity</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-category">🛡️ Cybersecurity</span>
+            </div>
+            <h3 class="project-title">SpectraOps</h3>
+            <p class="project-desc">A full-stack cybersecurity awareness platform featuring an email breach checker API,
+              password strength analyzer, and security education content.</p>
+            <div class="project-results">
+              <div class="result-item">
+                <span class="result-label">Features</span>
+                <span class="result-value">3 Security Tools</span>
+              </div>
+              <div class="result-item">
+                <span class="result-label">Type</span>
+                <span class="result-value">Full Stack Platform</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- UMS -->
+        <div class="project-card reveal" data-category="dev">
+          <div class="project-media">
+            <video class="project-video" muted loop playsinline>
+              <source src="Assets/Web Portfolio/Weather App.mp4" type="video/mp4" />
+            </video>
+            <div class="project-overlay">
+              <div class="project-tags">
+                <span class="project-tag">HTML/CSS</span>
+                <span class="project-tag">JS</span>
+                <span class="project-tag">PHP</span>
+                <span class="project-tag">MySQL</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-category">⚡ Full Stack</span>
+            </div>
+            <h3 class="project-title">Library / University Management System</h3>
+            <p class="project-desc">A comprehensive full-stack management platform with role-based access control,
+              database normalization, and a clean, responsive UI.</p>
+            <div class="project-results">
+              <div class="result-item">
+                <span class="result-label">Stack</span>
+                <span class="result-value">PHP + MySQL</span>
+              </div>
+              <div class="result-item">
+                <span class="result-label">DB Design</span>
+                <span class="result-value">Optimized</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quiz App -->
+        <div class="project-card reveal" data-category="dev">
+          <div class="project-media">
+            <video class="project-video" muted loop playsinline>
+              <source src="Assets/Web Portfolio/Quiz app.png" type="video/mp4" />
+            </video>
+            <div class="project-overlay">
+              <div class="project-tags">
+                <span class="project-tag">HTML/CSS</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">APIs</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-category">⚡ Development</span>
+            </div>
+            <h3 class="project-title">Interactive Quiz Application</h3>
+            <p class="project-desc">A dynamic quiz app with API integrations, animated scoring systems, real-time
+              feedback, and adaptive question rendering.</p>
+            <div class="project-results">
+              <div class="result-item">
+                <span class="result-label">UX</span>
+                <span class="result-value">Animated UI</span>
+              </div>
+              <div class="result-item">
+                <span class="result-label">Data</span>
+                <span class="result-value">API Driven</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Weather App -->
+        <div class="project-card reveal" data-category="dev">
+          <div class="project-media">
+            <video class="project-video" muted loop playsinline>
+              <source src="Assets/Web Portfolio/Weather App.mp4" type="video/mp4" />
+            </video>
+            <div class="project-overlay">
+              <div class="project-tags">
+                <span class="project-tag">HTML/CSS</span>
+                <span class="project-tag">JS</span>
+                <span class="project-tag">REST API</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-category">⚡ Development</span>
+            </div>
+            <h3 class="project-title">Real-Time Weather Application</h3>
+            <p class="project-desc">A sleek weather dashboard that fetches live data via OpenWeatherMap API, displaying
+              forecasts with dynamic visual themes based on conditions.</p>
+            <div class="project-results">
+              <div class="result-item">
+                <span class="result-label">Data</span>
+                <span class="result-value">Live API</span>
+              </div>
+              <div class="result-item">
+                <span class="result-label">Dynamic UI</span>
+                <span class="result-value">Condition-aware</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- To-Do List -->
+        <div class="project-card reveal" data-category="dev">
+          <div class="project-media">
+            <video class="project-video" muted loop playsinline>
+              <source src="Assets/Web Portfolio/To Do list.mp4" type="video/mp4" />
+            </video>
+            <div class="project-overlay">
+              <div class="project-tags">
+                <span class="project-tag">HTML/CSS</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">LocalStorage</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-category">⚡ Development</span>
+            </div>
+            <h3 class="project-title">Task Manager / To-Do App</h3>
+            <p class="project-desc">A productivity-focused task manager with drag-and-drop, priority tagging, persistent
+              local storage, and a clean minimal interface.</p>
+            <div class="project-results">
+              <div class="result-item">
+                <span class="result-label">Persistence</span>
+                <span class="result-value">LocalStorage</span>
+              </div>
+              <div class="result-item">
+                <span class="result-label">UX</span>
+                <span class="result-value">Drag & Drop</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3D Portfolio -->
+        <div class="project-card reveal" data-category="dev">
+          <div class="project-media">
+            <video class="project-video" muted loop playsinline>
+              <source src="Assets/Web Portfolio/3d portfolio.mp4" type="video/mp4" />
+            </video>
+            <div class="project-overlay">
+              <div class="project-tags">
+                <span class="project-tag">Three.js</span>
+                <span class="project-tag">WebGL</span>
+                <span class="project-tag">GSAP</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-category">⚡ Development</span>
+            </div>
+            <h3 class="project-title">3D Interactive Portfolio</h3>
+            <p class="project-desc">A highly immersive 3D web experience built with modern web technologies, featuring
+              interactive elements and smooth animations.</p>
+            <div class="project-results">
+              <div class="result-item">
+                <span class="result-label">Tech</span>
+                <span class="result-value">3D WebGL</span>
+              </div>
+              <div class="result-item">
+                <span class="result-label">UX</span>
+                <span class="result-value">Immersive</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shopify + Ads -->
+        <div class="project-card reveal" data-category="marketing">
+          <div class="project-media">
+            <div class="project-placeholder marketing-placeholder">
+              <span class="placeholder-icon">🛒</span>
+              <span>Shopify + Ads</span>
+            </div>
+            <div class="project-overlay">
+              <div class="project-tags">
+                <span class="project-tag">Shopify</span>
+                <span class="project-tag">Facebook Ads</span>
+                <span class="project-tag">TikTok Ads</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-category">📊 E-Commerce</span>
+            </div>
+            <h3 class="project-title">Shopify Store Optimizations & Ad Campaigns</h3>
+            <p class="project-desc">Built and optimized 3+ Shopify stores from ground up. Ran targeted Facebook & TikTok
+              ad campaigns delivering measurable, scalable results through NexaGrowth.</p>
+            <div class="project-results">
+              <div class="result-item">
+                <span class="result-label">ROAS</span>
+                <span class="result-value highlight">2.5×</span>
+              </div>
+              <div class="result-item">
+                <span class="result-label">CPA</span>
+                <span class="result-value highlight">−35%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Editing -->
+        <div class="project-card reveal" data-category="video">
+          <div class="project-media">
+            <video class="project-video" muted loop playsinline>
+              <source src="Assets/Clients video/1228 (1)(3).mp4" type="video/mp4" />
+            </video>
+            <div class="project-overlay">
+              <div class="project-tags">
+                <span class="project-tag">Premiere Pro</span>
+                <span class="project-tag">CapCut</span>
+                <span class="project-tag">Motion Graphics</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-category">🎬 Video Production</span>
+            </div>
+            <h3 class="project-title">Client Video Portfolio</h3>
+            <p class="project-desc">Produced 50+ video projects including social media reels, ad creatives, and motion
+              graphic pieces — all optimized for engagement and brand storytelling.</p>
+            <div class="project-results">
+              <div class="result-item">
+                <span class="result-label">Projects</span>
+                <span class="result-value highlight">50+</span>
+              </div>
+              <div class="result-item">
+                <span class="result-label">Engagement</span>
+                <span class="result-value highlight">+35%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Background</div>
+        <h2 class="section-title">Experience</h2>
+        <p class="section-desc">A track record of building, launching, and delivering results across industries.</p>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Founder & Digital Strategist</h3>
+                <div class="timeline-company">NexaGrowth — Digital Marketing Agency</div>
+              </div>
+              <span class="timeline-date">2024 – Present</span>
+            </div>
+            <p class="timeline-desc">Founded and operate a digital marketing agency specializing in Shopify store
+              optimization, Facebook & TikTok advertising, and growth strategy for e-commerce brands.</p>
+            <ul class="timeline-achievements">
+              <li>Achieved 2.5× ROAS across multiple client campaigns</li>
+              <li>Reduced client CPA by 35% through data-driven optimization</li>
+              <li>Built and launched 3+ Shopify stores from scratch</li>
+              <li>Managed 10+ ad campaigns across Meta & TikTok platforms</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">Shopify</span>
+              <span class="tag">Facebook Ads</span>
+              <span class="tag">TikTok Ads</span>
+              <span class="tag">Strategy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Intern — Digital Marketing & Operations</h3>
+                <div class="timeline-company">Capxa</div>
+              </div>
+              <span class="timeline-date">2024</span>
+            </div>
+            <p class="timeline-desc">Gained hands-on experience in digital operations, customer communication, and
+              marketing workflows within a professional agency environment.</p>
+            <ul class="timeline-achievements">
+              <li>Assisted in running live ad campaigns and tracking performance metrics</li>
+              <li>Managed client communications and support operations</li>
+              <li>Contributed to content strategy and audience targeting</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">Marketing</span>
+              <span class="tag">Operations</span>
+              <span class="tag">Client Support</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Freelance Developer & Video Editor</h3>
+                <div class="timeline-company">Independent Freelance Work</div>
+              </div>
+              <span class="timeline-date">2023 – Present</span>
+            </div>
+            <p class="timeline-desc">Delivered full-stack web development projects and professional video editing
+              services to international clients, managing projects end-to-end.</p>
+            <ul class="timeline-achievements">
+              <li>Built full-stack web applications using PHP, MySQL, and JavaScript</li>
+              <li>Produced 50+ video projects for social media and advertising</li>
+              <li>Developed the SpectraOps cybersecurity platform independently</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">Web Dev</span>
+              <span class="tag">Video Editing</span>
+              <span class="tag">Cybersecurity</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Results Section -->
+  <section class="section results-section" id="results">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Impact</div>
+        <h2 class="section-title">Results That Speak</h2>
+        <p class="section-desc">Numbers behind the work — because results are what matter.</p>
+      </div>
+      <div class="results-grid">
+        <div class="result-card reveal">
+          <div class="result-card-number" data-target="2.5" data-suffix="×">0</div>
+          <div class="result-card-label">ROAS Achieved</div>
+          <div class="result-card-desc">Return on Ad Spend across Facebook & TikTok campaigns</div>
+        </div>
+        <div class="result-card reveal">
+          <div class="result-card-number" data-target="35" data-suffix="%">0</div>
+          <div class="result-card-label">CPA Reduction</div>
+          <div class="result-card-desc">Reduction in cost-per-acquisition through ad optimization</div>
+        </div>
+        <div class="result-card reveal">
+          <div class="result-card-number" data-target="40" data-suffix="%">0</div>
+          <div class="result-card-label">Conversion Boost</div>
+          <div class="result-card-desc">Increase in store conversion rate through UX & funnel optimization</div>
+        </div>
+        <div class="result-card reveal">
+          <div class="result-card-number" data-target="35" data-suffix="%">0</div>
+          <div class="result-card-label">Engagement Boost</div>
+          <div class="result-card-desc">Increase in content engagement through strategic video production</div>
+        </div>
+        <div class="result-card reveal">
+          <div class="result-card-number" data-target="50" data-suffix="+">0</div>
+          <div class="result-card-label">Videos Edited</div>
+          <div class="result-card-desc">Professional video projects delivered for clients and brands</div>
+        </div>
+        <div class="result-card reveal">
+          <div class="result-card-number" data-target="10" data-suffix="+">0</div>
+          <div class="result-card-label">Ad Campaigns</div>
+          <div class="result-card-desc">Successful campaigns run across Meta and TikTok platforms</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section section-alt" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">What I Offer</div>
+        <h2 class="section-title">Services</h2>
+        <p class="section-desc">End-to-end digital solutions — from building to scaling to securing.</p>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card reveal">
+          <div class="service-icon">⚡</div>
+          <h3 class="service-title">Web Development</h3>
+          <p class="service-desc">Custom full-stack websites and web applications built with HTML, CSS, JavaScript, PHP,
+            and MySQL. Responsive, fast, and production-ready.</p>
+          <div class="service-tools">
+            <span>HTML5</span><span>CSS3</span><span>JS</span><span>PHP</span><span>MySQL</span>
+          </div>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">🛒</div>
+          <h3 class="service-title">Shopify Store Development</h3>
+          <p class="service-desc">Complete Shopify store setup and optimization — from theme customization and product
+            setup to checkout optimization for maximum conversions.</p>
+          <div class="service-tools">
+            <span>Shopify</span><span>Liquid</span><span>CRO</span><span>Analytics</span>
+          </div>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">📢</div>
+          <h3 class="service-title">Facebook & TikTok Ads</h3>
+          <p class="service-desc">Data-driven paid advertising campaigns that deliver real ROI. I handle creative
+            strategy, audience targeting, A/B testing, and scaling.</p>
+          <div class="service-tools">
+            <span>Meta Ads</span><span>TikTok Ads</span><span>Pixel</span><span>Analytics</span>
+          </div>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">🛡️</div>
+          <h3 class="service-title">Cybersecurity Solutions</h3>
+          <p class="service-desc">Website security audits, penetration testing, OWASP vulnerability assessments, and
+            implementing secure authentication and API protection.</p>
+          <div class="service-tools">
+            <span>Pentesting</span><span>OWASP</span><span>Nmap</span><span>API Security</span>
+          </div>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">🎬</div>
+          <h3 class="service-title">Video Editing</h3>
+          <p class="service-desc">Professional social media reels, ad creatives, YouTube content, and motion graphics —
+            edited for maximum retention and engagement.</p>
+          <div class="service-tools">
+            <span>Premiere Pro</span><span>CapCut</span><span>AI Tools</span>
+          </div>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">📈</div>
+          <h3 class="service-title">Digital Strategy</h3>
+          <p class="service-desc">End-to-end digital growth strategy — combining technical execution with data-driven
+            marketing to help brands scale systematically.</p>
+          <div class="service-tools">
+            <span>Growth</span><span>Analytics</span><span>Funnels</span><span>Branding</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Let's Connect</div>
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="section-desc">Ready to build something great? Let's talk about your project, opportunity, or idea.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3 class="contact-info-title">Let's Work Together</h3>
+          <p class="contact-info-text">Whether you need a developer, a marketing strategist, a cybersecurity expert, or
+            a video editor — I'm available for freelance projects, internships, and full-time opportunities.</p>
+
+          <div class="contact-links">
+            <a href="mailto:talhamajid404@gmail.com" class="contact-link">
+              <span class="contact-link-icon">✉</span>
+              <div>
+                <div class="contact-link-label">Email</div>
+                <div class="contact-link-value">talhamajid404@gmail.com</div>
+              </div>
+            </a>
+            <a href="tel:+923068888847" class="contact-link">
+              <span class="contact-link-icon">📱</span>
+              <div>
+                <div class="contact-link-label">Phone</div>
+                <div class="contact-link-value">0306-8888847</div>
+              </div>
+            </a>
+            <a href="https://linkedin.com/in/rana-muhammad-talha-majid-25233228b" target="_blank" rel="noopener"
+              class="contact-link">
+              <span class="contact-link-icon">💼</span>
+              <div>
+                <div class="contact-link-label">LinkedIn</div>
+                <div class="contact-link-value">Connect with me</div>
+              </div>
+            </a>
+            <a href="https://github.com/ranatalhamajid1" target="_blank" rel="noopener" class="contact-link">
+              <span class="contact-link-icon">🔗</span>
+              <div>
+                <div class="contact-link-label">GitHub</div>
+                <div class="contact-link-value">View my code</div>
+              </div>
+            </a>
+            <a href="https://drive.google.com/drive/folders/1QiHfsQXcBhuoTmY8-36GREO7RCPUklFQ?usp=drive_link"
+              target="_blank" rel="noopener" class="contact-link">
+              <span class="contact-link-icon">🌐</span>
+              <div>
+                <div class="contact-link-label">Web Portfolio</div>
+                <div class="contact-link-value">View my websites</div>
+              </div>
+            </a>
+            <a href="https://drive.google.com/drive/folders/1-iXu8c_Hwk9-9nOsQpRPMkc4kaHZcjEz?usp=drive_link"
+              target="_blank" rel="noopener" class="contact-link">
+              <span class="contact-link-icon">🎬</span>
+              <div>
+                <div class="contact-link-label">Video Editing Portfolio</div>
+                <div class="contact-link-value">View my videos</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="resume-downloads">
+            <p class="resume-title">Download Resume</p>
+            <div class="resume-btns">
+              <a href="Assets/cvs/Rana_Talha_WebDev_Resume.pdf" download class="btn btn-sm btn-outline">Web Dev</a>
+              <a href="Assets/cvs/Rana_Talha_Resume_Cyber.pdf" download class="btn btn-sm btn-outline">Cybersecurity</a>
+              <a href="Assets/cvs/Rana_Talha_Ecommerce_Resume.pdf" download
+                class="btn btn-sm btn-outline">E-Commerce</a>
+              <a href="Assets/cvs/Rana_Talha_VideoEditor_Resume.pdf" download class="btn btn-sm btn-outline">Video
+                Editing</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal">
+          <form class="contact-form" id="contactForm" action="https://formsubmit.co/talhamajid404@gmail.com"
+            method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="name">Your Name</label>
+                <input class="form-input" type="text" id="name" name="name" placeholder="John Smith" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Your Email</label>
+                <input class="form-input" type="email" id="email" name="email" placeholder="john@example.com"
+                  required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="service">Service Needed</label>
+              <select class="form-input" id="service" name="service">
+                <option value="">Select a service...</option>
+                <option value="web-development">Web Development</option>
+                <option value="shopify">Shopify Store Setup</option>
+                <option value="ads">Facebook / TikTok Ads</option>
+                <option value="cybersecurity">Cybersecurity</option>
+                <option value="video-editing">Video Editing</option>
+                <option value="other">Other / General Inquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">Message</label>
+              <textarea class="form-input form-textarea" id="message" name="message" rows="5"
+                placeholder="Tell me about your project or opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <span id="submitText">Send Message</span>
+              <span id="submitLoader" class="hidden">Sending...</span>
+            </button>
+            <div class="form-feedback" id="formFeedback"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo">
+            <span class="logo-text">Talha<span class="logo-dot">.</span></span>
+          </a>
+          <p class="footer-tagline">Cybersecurity Enthusiast | Full Stack Developer | E-Commerce Strategist | Video
+            Editor</p>
+          <p class="footer-location">📍 Pakistan</p>
+        </div>
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Navigation</h4>
+          <a href="#about" class="footer-link">About</a>
+          <a href="#skills" class="footer-link">Skills</a>
+          <a href="#projects" class="footer-link">Projects</a>
+          <a href="#experience" class="footer-link">Experience</a>
+          <a href="#contact" class="footer-link">Contact</a>
+        </div>
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Services</h4>
+          <a href="#services" class="footer-link">Web Development</a>
+          <a href="#services" class="footer-link">Shopify Setup</a>
+          <a href="#services" class="footer-link">Facebook Ads</a>
+          <a href="#services" class="footer-link">Cybersecurity</a>
+          <a href="#services" class="footer-link">Video Editing</a>
+        </div>
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Resumes</h4>
+          <a href="Assets/cvs/Rana_Talha_General_Resume.pdf" download class="footer-link">General Resume</a>
+          <a href="Assets/cvs/Rana_Talha_WebDev_Resume.pdf" download class="footer-link">Web Dev Resume</a>
+          <a href="Assets/cvs/Rana_Talha_Resume_Cyber.pdf" download class="footer-link">Cyber Resume</a>
+          <a href="Assets/cvs/Rana_Talha_Ecommerce_Resume.pdf" download class="footer-link">E-Commerce Resume</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2025 Rana Muhammad Talha Majid. All rights reserved.</p>
+        <a href="#hero" class="back-to-top" id="backToTop" aria-label="Back to top">↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
